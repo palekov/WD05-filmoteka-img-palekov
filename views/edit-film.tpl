@@ -29,6 +29,4 @@
 		</div>
 		<input type="submit" class="button" value="Обновить" name="update-film">
 	</form>
-
-</div>
 </div>
