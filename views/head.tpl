@@ -40,13 +40,10 @@
 
 				<?php  }  ?>
 
-
 <?php
 				if (!isset($_SESSION['user'])) { ?>
 					<a href="login.php" class="admin-nav__link">Вход</a>
 					<?php  }  ?>
-
-
 
 	<?php
 				if (isset($_SESSION['user'])) {
