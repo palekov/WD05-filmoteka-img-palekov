@@ -16,10 +16,19 @@
 			<div class="col">
 				<div class="card__header">
 					<h4 class="title-4"><?=$film['title']?></h4>
+
+			<?php
+				if (isset($_SESSION['user'])) {
+					if ($_SESSION['user'] == 'admin')  {  
+			?>
 					<div class="buttons">
-					<a href="edit.php?id=<?=$film['id']?>" class="button button--edit">Редактировать</a>
-					<a href="?action=delete&id=<?=$film['id']?>" class="button button--delete">Удалить</a>
+						<a href="edit.php?id=<?=$film['id']?>" class="button button--edit">Редактировать</a>
+						<a href="?action=delete&id=<?=$film['id']?>" class="button button--delete">Удалить</a>
 					</div>
+			<?php 
+					}
+				} 
+			?>	
 				</div>
 				<div class="badge"><?=$film['genre']?></div>
 				<div class="badge"><?=$film['year']?></div>
