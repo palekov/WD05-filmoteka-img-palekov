@@ -50,5 +50,9 @@ if (isset($_FILES['photo']['name']) && $_FILES['photo']['tmp_name'] != "") {
 	//Создаем миниатюру картинки
 	$img = createThumbnail($target_file, $wmax, $hmax);
 	$img->writeImage($resized_file);
+}	  else   {
+	$db_file_name ="";
 }
+//echo $db_file_name;
+
 ?>

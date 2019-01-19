@@ -2,6 +2,7 @@
 <html lang="ru">
 <head>
 	<meta charset="UTF-8"/>
+
 	<title>Фильмотека</title>
 	<!--[if IE]>
 	  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -57,6 +58,15 @@
 			?>	
 
 		</div>
+		
+
+		<?php if (isset($_SESSION['user']))  { ?>
+		<div class="mb-50">
+			<?php if (isset($_SESSION['user']))  { ?>
+				Привет, <?=$_SESSION['user']?>!
+			<?php }  ?>
+		</div>
+		<?php }  ?>
 		
 		<?php if (isset($_COOKIE['user-name']))  { ?>
 		<div class="mb-50">
