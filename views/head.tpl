@@ -60,15 +60,9 @@
 		</div>
 		
 
-		<?php if (isset($_SESSION['user']))  { ?>
-		<div class="mb-50">
-			<?php if (isset($_SESSION['user']))  { ?>
-				Привет, <?=$_SESSION['user']?>!
-			<?php }  ?>
-		</div>
-		<?php }  ?>
+
 		
-		<?php if (isset($_COOKIE['user-name']))  { ?>
+		<?php if (isset($_COOKIE['user-name'])&&(isset($_SESSION['user'])))  { ?>
 		<div class="mb-50">
 			<?php if (isset($_COOKIE['user-city']))  { ?>
 				Привет, <?=$_COOKIE['user-name']?> из <?=$_COOKIE['user-city']?>!
@@ -76,4 +70,11 @@
 				Привет, <?=$_COOKIE['user-name']?>!
 			<?php }  ?>
 		</div>
-		<?php }  ?>
+		<?php } else { 
+			 if (isset($_SESSION['user']))  { ?>
+			<div class="mb-50">
+				<?php if (isset($_SESSION['user']))  { ?>
+					Привет, <?=$_SESSION['user']?>!
+				<?php }  ?>
+			</div>
+			<?php }  }  ?>
